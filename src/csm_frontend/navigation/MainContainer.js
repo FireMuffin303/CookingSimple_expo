@@ -5,6 +5,7 @@ import HomeScreen from "./screens/HomeScreen";
 import AccountScreen from "./screens/AccountScreen";
 import AddScreen from "./screens/AddScreen";
 import { Ionicons } from '@expo/vector-icons';
+import RegisterScreen from "./screens/RegisterScreen";
 
 const Tab = createBottomTabNavigator();
 
@@ -34,6 +35,12 @@ export default function MainContainer(){
                     )
                 }}/>
                 <Tab.Screen name="Account" component={AccountScreen} options={{
+                    tabBarIcon:({color,size}) =>(
+                        <Ionicons name="person" size={30} color={"white"}/>
+                    )
+                }}/>
+
+                <Tab.Screen name="Register" component={RegisterScreen} options={{
                     tabBarIcon:({color,size}) =>(
                         <Ionicons name="person" size={30} color={"white"}/>
                     )

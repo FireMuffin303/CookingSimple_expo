@@ -4,6 +4,10 @@ import { Ionicons } from '@expo/vector-icons'; // Assuming you have the Ionicons
 
 const AccountPage = () => {
   const handleLogout = () => {
+    navigation.reset({
+      index: 0,
+      routes: [{ name: 'Register' }],
+    });
     // Implement your logout functionality here
   };
 
